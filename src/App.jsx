@@ -9,6 +9,8 @@ import DetailsPage from "./pages/details-page";
 import SearchResult from "./pages/search-result";
 import ExplorePage from "./pages/explore-page";
 import Page404 from "./pages/404-page";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -34,6 +36,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/:mediaType/:id" element={<DetailsPage />} />
@@ -41,6 +44,7 @@ const App = () => {
         <Route path="/explore/:mediaType" element={<ExplorePage />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
