@@ -5,14 +5,14 @@ import Popular from "./popular";
 import TopRated from "./top-rated";
 
 const HomePage = () => {
-  return (
-    <div className="home-page">
-      <HeroBanner />
-      <Trending />
-      <Popular />
-      <TopRated />
-    </div>
-  );
+	return (
+		<div className="home-page">
+			<HeroBanner />
+			<Trending />
+			<Popular />
+			<TopRated />
+		</div>
+	);
 };
 
 export default HomePage;

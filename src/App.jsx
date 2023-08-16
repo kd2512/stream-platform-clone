@@ -13,40 +13,40 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 
 const App = () => {
-  const dispatch = useDispatch();
-  const { url } = useSelector((state) => state.home);
+	const dispatch = useDispatch();
+	const { url } = useSelector((state) => state.home);
 
-  useEffect(() => {
-    fetchApiConfig();
-  }, []);
+	useEffect(() => {
+		fetchApiConfig();
+	}, []);
 
-  const fetchApiConfig = () => {
-    fetchDataFromAPI("/configuration").then((res) => {
-      console.log(res);
+	const fetchApiConfig = () => {
+		fetchDataFromAPI("/configuration").then((res) => {
+			console.log(res);
 
-      const config_url = {
-        backdrop: res.images.secure_base_url + "original",
-        profile: res.images.secure_base_url + "original",
-        poster: res.images.secure_base_url + "original",
-      };
+			const config_url = {
+				backdrop: res.images.secure_base_url + "original",
+				profile: res.images.secure_base_url + "original",
+				poster: res.images.secure_base_url + "original",
+			};
 
-      dispatch(getApiConfiguration(config_url));
-    });
-  };
+			dispatch(getApiConfiguration(config_url));
+		});
+	};
 
-  return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/:mediaType/:id" element={<DetailsPage />} />
-        <Route path="/search/:query" element={<SearchResult />} />
-        <Route path="/explore/:mediaType" element={<ExplorePage />} />
-        <Route path="*" element={<Page404 />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<Header />
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				<Route path="/:mediaType/:id" element={<DetailsPage />} />
+				<Route path="/search/:query" element={<SearchResult />} />
+				<Route path="/explore/:mediaType" element={<ExplorePage />} />
+				<Route path="*" element={<Page404 />} />
+			</Routes>
+			<Footer />
+		</BrowserRouter>
+	);
 };
 
 export default App;
