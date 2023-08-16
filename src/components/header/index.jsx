@@ -84,16 +84,19 @@ const Header = () => {
             TV Shows
           </li>
           <li className="menuItem">
-            <HiOutlineSearch onClick={openSearch} />
+            <HiOutlineSearch
+              style={{ cursor: "pointer" }}
+              onClick={openSearch}
+            />
           </li>
         </ul>
 
         <div className="mobileMenuItems">
-          <HiOutlineSearch onClick={openSearch} />
+          <HiOutlineSearch style={{ cursor: "pointer" }} onClick={openSearch} />
           {mobileMenu ? (
             <VscChromeClose onClick={() => setMobileMenu(false)} />
           ) : (
-            <SlMenu onClick={openMobileMenu} />
+            <SlMenu style={{ cursor: "pointer" }} onClick={openMobileMenu} />
           )}
         </div>
       </ContentWrapper>
