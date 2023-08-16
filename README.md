@@ -1,6 +1,6 @@
 # StreamVerse - Movie/TV Show Streaming App
 
-StreamVerse is a modern movie and TV show streaming app built using React, React Redux, and React Router Dom. This app provides users with a seamless experience to discover and enjoy their favorite movies and TV shows. With features like lazy-loading, infinite scrolling, and custom hooks, StreamVerse offers a user-friendly interface that works well on all devices.
+StreamVerse is a modern movie and TV show streaming app built using React, React Redux, and React Router Dom. This app provides users with a seamless experience to discover and enjoy their favorite movies and TV shows. With features like lazy-loading, infinite scrolling, and custom hooks, StreamVerse offers a user-friendly responsive interface that works well on all devices.
 
 ## Features
 
