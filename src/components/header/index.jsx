@@ -47,7 +47,7 @@ const Header = () => {
 		}
 		setTimeout(() => {
 			setShowSearch(false);
-		}, 1500);
+		}, 3000);
 	};
 
 	const openSearch = () => {
