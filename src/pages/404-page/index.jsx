@@ -1,11 +1,16 @@
 import "./index.scss";
 
-const Page404 = () => {
-  return (
-    <div className="404-page">
-      <div>I am a Page404</div>
-    </div>
-  );
+import ContentWrapper from "../../components/content-wrapper";
+
+const PageNotFound = () => {
+	return (
+		<div className="pageNotFound">
+			<ContentWrapper>
+				<span className="bigText">404</span>
+				<span className="smallText">Page not found!</span>
+			</ContentWrapper>
+		</div>
+	);
 };
 
-export default Page404;
+export default PageNotFound;
